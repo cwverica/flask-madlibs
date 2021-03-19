@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %} Generating Madlib... {% endblock %}
+
+{% block content %}
+<h1>Let's generate this Madlib!</h1>
+
+<form name="generate_form" action="/madlib/{{story_id}}/story">
+    {% for x in range(len) %}
+    <label class="input_label">{{display_words[x]}}:</label>
+    <input type="text" name="{{words_needed[x]}}">
+    <br>
+    {% endfor %}
+
+    <button>Let's Do This!</button>
+</form>
+
+{% endblock %}

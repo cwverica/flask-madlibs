@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %} Story Time! {% endblock %}
+
+{% block content %}
+<h1 class="story_title">{{story_title}}</h1>
+<h3>So the story goes:</h3>
+<p class="story_body">{{text_story}}</p>
+
+{% endblock %}

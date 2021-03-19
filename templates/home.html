@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %} Chose your Madlib!{% endblock %}
+
+{% block content %}
+<h1>Choose your Madlib!</h1>
+
+
+<ul>
+        {% for index in story_map %}
+        <li><a class="story_selector" href="/madlib/{{index}}/generate">{{story_map[index]}}</a></li>
+        {% endfor %}
+</ul>
+
+{% endblock %}
